@@ -1,0 +1,473 @@
+:root{
+	--itemGrow: 1.2;
+	--duration: 250ms;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #141414;
+	overflow-y: auto;
+}
+/* ----------------MENUS--------------------- */
+
+/* Primer Menu */
+.menu {
+    position: fixed;
+	z-index: 6;
+	background: rgb(0,0,0);
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.589) 100%);
+	width: 100%;
+	height: 70px;
+}
+.menu .nav-primario ul {
+	list-style: none;
+}
+
+.menu .nav-primario ul li a{
+	text-decoration: none;
+	color: #e5e5e5;
+	font-size: 15px;
+	margin: auto 8px;
+	font-weight: 300;
+}
+
+.menu .nav-primario ul li:nth-child(2) a{
+	cursor:default;
+}
+
+.menu .nav-primario ul li a:hover {
+	color: #B3B3B3;
+	transition: all .4s;
+}
+
+/* Segundo Menu */
+
+.menu .nav-secundario ul {
+	list-style: none;
+}
+
+.menu .nav-secundario ul li {
+	margin: auto 9px;
+	color: #e5e5e5;
+}
+
+.menu .nav-secundario ul li a {
+	font-size: 15px;
+	text-decoration: none;
+	color: #fff;
+}
+
+
+.menu .nav-secundario ul li input{
+	width: 250px;
+	display: none;
+	background-color: #000;
+	border: double 1px #fff;
+	padding: 5px 0;
+	padding-left: 35px;
+	color: #fff;
+}
+
+.input-buscador {
+	animation: aparecerBuscador .6s;
+}
+
+@keyframes aparecerBuscador {
+	0% {
+		width: 0%;
+	}
+
+	100%{
+		width: 100%;
+	}
+}
+
+
+
+/* -----------FONDO DE INICIO DE NETFLIX------------- */
+.bg-inicio {
+	position: relative;
+	background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0)),url('../imgs/peliculas/BgInicioNetflix.jpg');
+    background-color: rgba(0,0,0, 0);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 107vh;
+}
+
+.icon-inicio-bg {
+	position: absolute;
+	width: 35%;
+	height: 300px;
+	top: 110px;
+	left: 50px;
+}
+
+.text-inicio {
+	width: 40%;
+	height: 300px;
+	top: 430px;
+	font-size: 25px;
+	color: #fff;
+	font-weight: 500;
+	left: 50px;
+	position: absolute;
+}
+/* play */
+.icon-play-bg {
+	width: auto;
+	padding: 0px 30px 10px 30px;
+	border-radius: 5px;
+	font-size: 25px;
+	top: 600px;
+	background: #fff;
+	font-size: 28px;
+	color: #000;
+	font-weight: 600;
+	left: 50px;
+	position: absolute;
+	text-decoration: none;
+}
+
+.icon-play-bg:hover {
+	background: #ccc;
+	color: #000;
+}
+
+.span-play {
+	position: relative;
+	top: 10px;
+	font-size: 40px;
+}
+/* info */
+
+.icon-info-bg {
+	width: auto;
+	padding: 0px 30px 10px 30px;
+	border-radius: 5px;
+	font-size: 25px;
+	position: absolute;
+	top: 600px;
+	background: #444447;
+	font-size: 28px;
+	color: #fff;
+	font-weight: 600;
+	left: 300px;
+	text-decoration: none;
+}
+
+.icon-info-bg:hover {
+	background: #313133b7;
+	color: #fff;
+}
+
+.span-info {
+	position: relative;
+	top: 10px;
+	font-size: 40px;
+}
+/* logo netflix */
+.logo-netflix{
+    width: 90px;
+	position: relative;
+	top: -16px;
+	margin-left: 40px;
+}
+
+
+/* NOTIFICACIONES */
+
+.fs-icon {
+	font-size: 25px;
+	cursor: pointer;
+}
+
+.fs-icon-rotate {
+	font-size: 30px;
+	transform: rotate(-15deg);
+	font-weight: 900;
+	cursor: pointer;
+}
+
+.contenedor-notificaciones {
+	border-top: 2px solid #fff;
+	position: absolute;
+	top: 75px;
+	right: 120px;
+	width: 400px;
+	background-color: rgba(0, 0, 0, 0.8);
+	height: 70vh;
+	overflow: hidden;
+	overflow-y: scroll; 
+	display: none;
+	flex-direction: column;
+	padding: 20px 10px 15px 15px;
+}
+
+
+
+.hover-contenedor {
+	position: absolute;
+	top: 45px;
+	right: 120px;
+	width: 80px;
+	background-color: transparent;
+	height: 50px;
+}
+
+.hover-contenedor:hover ~ .contenedor-notificaciones{
+	display: flex;
+}
+
+.fs-icon:hover ~ .contenedor-notificaciones{
+	display: flex;
+}
+
+.contenedor-notificaciones:hover {
+	display: flex;
+}
+
+
+
+.contenedor-notificaciones .contenido-notificacion {
+	width: 95%;
+	height: auto;
+	display: flex;
+	margin: 0 auto;
+}
+
+.contenedor-notificaciones .contenido-notificacion .img {
+	padding-right: 15px;
+	margin-top: 15px;
+}
+
+.contenedor-notificaciones .contenido-notificacion .contenido {
+	display: flex;
+	flex-direction: column;
+}
+
+.contenedor-notificaciones .contenido-notificacion .contenido p {
+	font-size: 16px;
+	font-weight: 500;
+	color: #fff;
+	display: inline;
+	margin: 0 0;
+}
+
+.contenedor-notificaciones .contenido-notificacion .contenido span {
+	font-size: 12px;
+	color: #808080;
+}
+
+
+/* usuarios dentro de la page */
+
+.contenedor-usuarios{
+	position: absolute;
+	top: 75px;
+	right: 70px;
+	width: 218px;
+	background-color: rgba(0, 0, 0, 0.95);
+	height: 400px;
+	display: none;
+	overflow: hidden;
+	flex-direction: column;
+	padding: 20px 10px 15px 15px;
+}
+
+.hover-underline {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.hover-underline:hover > p {
+	text-decoration: underline;
+}
+
+
+
+.hover-contenedor-users {
+	position: absolute;
+	top: 49px;
+	right: 70px;
+	width: 50px;
+	background-color: transparent;
+	height: 50px;
+}
+
+.hover-contenedor-users:hover ~ .contenedor-usuarios{
+	display: flex;
+}
+
+.img-users-hover {
+	cursor: pointer;
+}
+
+.img-users-hover:hover ~ .contenedor-usuarios{
+	display: flex;
+}
+
+.contenedor-usuarios:hover {
+	display: flex;
+}
+
+
+/* caruousel */
+
+.wrapper {
+	position: absolute;
+	top: 670px;
+	display: grid;
+	grid-template-columns: repeat(3, 99%);
+	margin-left: 10px;
+	overflow: hidden;
+	scroll-behavior: smooth;
+	width: 95%;
+	height: auto;
+	margin-left: 2%;
+}
+.wrapper h2 {
+	position: relative;
+	top: 150px;
+	color: #fff;
+}
+
+.wrapper section {
+	width: 100%;
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	margin: 20px 0;
+}
+
+.wrapper section .item {
+	padding: 0 2px;
+	transition: 250ms all;
+	cursor: pointer;
+
+}
+
+.wrapper section .item img {
+	border-radius: 10px;
+	height: 165px;
+	width: 350px;
+}
+
+.wrapper section .item:hover {
+	margin: 0 40px;
+	transform: scale(1.25);
+}
+
+.wrapper section a {
+	position: absolute;
+	color: #fff;
+	text-decoration: none;
+	font-size: 6em;
+	background: black;
+	width: 80px;
+	padding: 20px;
+	padding-top: 5px;
+	text-align: center;
+	z-index: 1;
+}
+
+.wrapper section a:nth-of-type(1) {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+
+.wrapper section a:nth-of-type(2) {
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+
+
+
+
+/* CAROUSEL DEL MAIN */
+
+
+.contenedor-main {
+	overflow: hidden;
+	position: relative;
+}
+
+.wrapper-main {
+	position: relative;
+	top: -40px;
+	display: grid;
+	grid-template-columns: repeat(3, 99%);
+	overflow: hidden;
+	scroll-behavior: smooth;
+	width: 95%;
+	height: auto;
+	margin-left: 2%;
+}
+.wrapper-main h2 {
+	color: #fff;
+	position: relative;
+	top: 80px;
+}
+
+.wrapper-main section {
+	width: 100%;
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+	margin: 20px 0;
+}
+
+.wrapper-main section .item {
+	padding: 0 2px;
+	transition: 250ms all;
+	cursor: pointer;
+
+}
+
+.wrapper-main section .item img {
+	border-radius: 10px;
+	height: 165px;
+	width: 350px;
+}
+
+.wrapper-main section .item:hover {
+	margin: 0 40px;
+	transform: scale(1.25);
+}
+
+.wrapper-main section a {
+	position: absolute;
+	color: #fff;
+	text-decoration: none;
+	font-size: 6em;
+	background: black;
+	width: 80px;
+	padding: 20px;
+	padding-top: 5px;
+	text-align: center;
+	z-index: 1;
+}
+
+.wrapper-main section a:nth-of-type(1) {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+
+.wrapper-main section a:nth-of-type(2) {
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}

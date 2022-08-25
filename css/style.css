@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    overflow: hidden;
+}
+
+.logo-netflix {
+    width: 170px;
+    position: relative;
+    top: -40px;
+    left: 40px;
+}
+
+.bg-netflix {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('../imgs/BgLogin.jpg');
+    background-color: rgba(0,0,0,0.6);
+	background-size: cover;
+	background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    object-fit: none;
+}
+
+.bg-login {
+    position: relative;
+    top: -80px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.705);
+    padding: 20px 55px;
+}
+.bg-login:hover {
+    color: #fff;
+}
+
+.input-login{
+    background: #333333;
+    padding: 13px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 8px 0 ;
+    color: #fff;
+}
+
+.input-login:focus {
+    outline: none;
+    background-color: #454545;
+}
+
+.input-login::placeholder {
+    color: #8C8C8C;
+}
+
+.labelRecordar {
+    color: #B3B3B3;
+    font-size: 0.85rem;
+}
+
+#recordarCuenta:checked {
+    accent-color: #E6E6E6;
+}
+.color-footer {
+    color: #737373;
+}
+.hover-underline {
+    text-decoration: none;
+}
+.hover-underline:hover {
+    text-decoration: underline;
+}
+.text-chaptcha {
+    font-size: .8rem;
+    color: #8C8C8C;
+}
+
+.text-tel {
+    color: #737373;
+    font-size: 1.05rem;
+}
+.text-tel a{
+    text-decoration: none;
+    color: #737373;
+}
+
+.text-tel a:hover{
+    text-decoration: underline;
+}
+
+.text-link {
+    color: #B3B3B3;
+    text-decoration: none;
+    font-size: 0.88rem;
+}
+.text-link:hover {
+    color: #B3B3B3;
+    text-decoration: underline;
+}
+
+.links a{
+    color: #737373;
+    text-decoration: none;
+    font-size: .9rem;
+}
+.links a:hover {
+    text-decoration: underline;
+}
+
+.btn-login {
+    border: none;
+    background-color: #E50914;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-login:hover {
+    color: #fff;
+}

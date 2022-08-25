@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #141414;
+}
+
+.logo-netflix{
+    width: 100px;
+    position: relative;
+    top: -15px;
+    left: 50px;
+}
+
+.img-user {
+    width: 188px;
+    border-radius: 5px;
+}
+.img-user:hover {
+    /* border: solid 3px #fff; */
+    outline: solid 4px #fff;
+}
+.img-user ~ span {
+    color: #adadad;
+}
+
+.img-user:hover ~ span {
+    color: #fff;
+}
