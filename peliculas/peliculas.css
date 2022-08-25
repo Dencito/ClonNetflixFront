@@ -320,9 +320,16 @@ body {
 
 /* caruousel */
 
+.titulo-primer-carousel {
+	position: relative;
+	top: 760px;
+	left: 50px;
+	color: #fff;
+}
+
 .wrapper {
 	position: absolute;
-	top: 670px;
+	top: 800px;
 	display: grid;
 	grid-template-columns: repeat(3, 99%);
 	margin-left: 10px;
@@ -332,12 +339,6 @@ body {
 	height: auto;
 	margin-left: 2%;
 }
-.wrapper h2 {
-	position: relative;
-	top: 150px;
-	color: #fff;
-}
-
 .wrapper section {
 	width: 100%;
 	position: relative;
@@ -402,9 +403,16 @@ body {
 	position: relative;
 }
 
+.contenedor-main h2 {
+	color: #fff;
+	position: relative;
+	top: 50px;
+	left: 50px;
+}
+
 .wrapper-main {
 	position: relative;
-	top: -40px;
+	top: 40px;
 	display: grid;
 	grid-template-columns: repeat(3, 99%);
 	overflow: hidden;
@@ -412,11 +420,6 @@ body {
 	width: 95%;
 	height: auto;
 	margin-left: 2%;
-}
-.wrapper-main h2 {
-	color: #fff;
-	position: relative;
-	top: 80px;
 }
 
 .wrapper-main section {
