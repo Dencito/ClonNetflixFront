@@ -93,7 +93,7 @@ body {
 /* -----------FONDO DE INICIO DE NETFLIX------------- */
 .bg-inicio {
 	position: relative;
-	background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0)),url('../imgs/peliculas/BgInicioNetflix.jpg');
+	background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0)),url('../../imgs/peliculas/BgInicioNetflix.jpg');
     background-color: rgba(0,0,0, 0);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -328,8 +328,7 @@ body {
 }
 
 .wrapper {
-	position: absolute;
-	top: 800px;
+	transform: translate(0, 380%);
 	display: grid;
 	grid-template-columns: repeat(3, 99%);
 	margin-left: 10px;

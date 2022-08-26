@@ -22,9 +22,9 @@ body {
     background-color: rgba(0,0,0,0.6);
 	background-size: cover;
 	background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
-    object-fit: none;
+    overflow: auto;
+    width: 100%;
+    height: auto;
 }
 
 .bg-login {
@@ -65,9 +65,6 @@ body {
 #recordarCuenta:checked {
     accent-color: #E6E6E6;
 }
-.color-footer {
-    color: #737373;
-}
 .hover-underline {
     text-decoration: none;
 }
@@ -100,6 +97,13 @@ body {
 .text-link:hover {
     color: #B3B3B3;
     text-decoration: underline;
+}
+
+.footer {
+    width: 100vw;
+    height: auto;
+    padding: 20px 30px;
+    background-color: rgba(0, 0, 0, 0.705);
 }
 
 .links a{
